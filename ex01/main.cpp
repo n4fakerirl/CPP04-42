@@ -6,7 +6,7 @@
 /*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 02:11:30 by ocviller          #+#    #+#             */
-/*   Updated: 2026/01/11 17:09:07 by ocviller         ###   ########.fr       */
+/*   Updated: 2026/01/30 15:28:23 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,28 +16,31 @@
 
 int main(void)
 {
-    Animal *zoo[10];
-    Cat *cat = new Cat();
+    const Animal* basic = new Animal();
+    const Animal* dog = new Dog();
+    const Animal* cat = new Cat();
 
-    for (int i = 0; i < 10; i++)
-    {
-        if (i <= 4)
-            zoo[i] = new Cat();
-        else
-            zoo[i] = new Dog();
-    }
-    for (int i = 0; i < 10; i++)
-        zoo[i]->makeSound();
+    std::cout << "\nTRUE ANIMALS\n\n";
+    std::cout << dog->getType() << " " << std::endl;
+    std::cout << cat->getType() << " " << std::endl;
+    cat->makeSound();
+    dog->makeSound();
+    basic->makeSound();
 
-    std::cout << "\n\n";
-    cat->setBrain("HEY");
-    cat->brain->getBrain();
-    std::cout << "\n\n";
-
-    for (int i = 0; i < 10; i++)
-    {
-        delete zoo[i];
-    }
+    std::cout << "\nWRONG ANIMALS\n\n";
+    const WrongAnimal* wrongmeow = new WrongCat();
+    const WrongAnimal* wrongani = new WrongAnimal();
+    std::cout << "\n" << wrongmeow->getType() << " " << std::endl;
+    std::cout << wrongani->getType() << " " << std::endl;
+    wrongmeow->makeSound();
+    wrongani->makeSound();
+    std::cout << "\n";
+    std::cout << "\nDELETE TRUE ANIMALS\n\n";
     delete cat;
+    delete dog;
+    delete basic;
+    std::cout << "\nDELETE WRONG ANIMALS\n\n";
+    delete wrongani;
+    delete wrongmeow;
     return 0;
 }

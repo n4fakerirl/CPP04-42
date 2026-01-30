@@ -6,22 +6,20 @@
 /*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 02:11:20 by ocviller          #+#    #+#             */
-/*   Updated: 2026/01/11 16:58:46 by ocviller         ###   ########.fr       */
+/*   Updated: 2026/01/30 11:26:02 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
-Dog::Dog() : Animal()
+Dog::Dog()
 {
     this->_type = "Dog";
-    this->brain = new Brain();
     std::cout << "Default Dog constructor called\n";
 }
 
 Dog::~Dog()
 {
-    delete this->brain;
     std::cout << "Destructor Dog called\n";
 }
 

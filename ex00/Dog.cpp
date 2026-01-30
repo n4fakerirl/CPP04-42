@@ -6,7 +6,7 @@
 /*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 02:11:20 by ocviller          #+#    #+#             */
-/*   Updated: 2026/01/11 16:19:58 by ocviller         ###   ########.fr       */
+/*   Updated: 2026/01/30 11:26:02 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Dog::~Dog()
     std::cout << "Destructor Dog called\n";
 }
 
-Dog::Dog(const Dog &other)
+Dog::Dog(const Dog &other) : Animal(other)
 {
 	*this = other;
 	std::cout << "Copy Constructor called of Dog\n";

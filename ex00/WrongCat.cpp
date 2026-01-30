@@ -6,7 +6,7 @@
 /*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 16:27:05 by ocviller          #+#    #+#             */
-/*   Updated: 2026/01/11 16:29:06 by ocviller         ###   ########.fr       */
+/*   Updated: 2026/01/30 11:26:19 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ WrongCat::~WrongCat()
     std::cout << "Destructor WrongCat called\n";
 }
 
-WrongCat::WrongCat(const WrongCat &other)
+WrongCat::WrongCat(const WrongCat &other) : WrongAnimal(other)
 {
 	*this = other;
 	std::cout << "Copy Constructor called of WrongCat\n";

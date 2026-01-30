@@ -6,11 +6,13 @@
 /*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 02:10:57 by ocviller          #+#    #+#             */
-/*   Updated: 2026/01/11 16:57:48 by ocviller         ###   ########.fr       */
+/*   Updated: 2026/01/11 16:29:38 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
+
+// ANIMAL
 
 std::string Animal::getType(void) const
 {

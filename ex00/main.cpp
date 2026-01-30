@@ -6,7 +6,7 @@
 /*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 02:11:30 by ocviller          #+#    #+#             */
-/*   Updated: 2026/01/11 16:39:27 by ocviller         ###   ########.fr       */
+/*   Updated: 2026/01/30 15:28:23 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,16 @@
 
 int main(void)
 {
-    const Animal* meta = new Animal();
-    const Animal* j = new Dog();
-    const Animal* i = new Cat();
+    const Animal* basic = new Animal();
+    const Animal* dog = new Dog();
+    const Animal* cat = new Cat();
 
     std::cout << "\nTRUE ANIMALS\n\n";
-    std::cout << j->getType() << " " << std::endl;
-    std::cout << i->getType() << " " << std::endl;
-    i->makeSound();
-    j->makeSound();
-    meta->makeSound();
+    std::cout << dog->getType() << " " << std::endl;
+    std::cout << cat->getType() << " " << std::endl;
+    cat->makeSound();
+    dog->makeSound();
+    basic->makeSound();
 
     std::cout << "\nWRONG ANIMALS\n\n";
     const WrongAnimal* wrongmeow = new WrongCat();
@@ -36,9 +36,9 @@ int main(void)
     wrongani->makeSound();
     std::cout << "\n";
     std::cout << "\nDELETE TRUE ANIMALS\n\n";
-    delete i;
-    delete j;
-    delete meta;
+    delete cat;
+    delete dog;
+    delete basic;
     std::cout << "\nDELETE WRONG ANIMALS\n\n";
     delete wrongani;
     delete wrongmeow;
