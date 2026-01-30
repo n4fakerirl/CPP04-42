@@ -6,7 +6,7 @@
 /*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 02:11:30 by ocviller          #+#    #+#             */
-/*   Updated: 2026/01/30 16:07:15 by ocviller         ###   ########.fr       */
+/*   Updated: 2026/01/30 16:26:27 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,7 @@ int main(void)
         else
             zoo[i] = new Dog();
     }
+    std::cout << "delete\n";
+    for (int i = 0; i < 10; i++)
+        delete zoo[i];
 }
