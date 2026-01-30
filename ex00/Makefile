@@ -6,11 +6,11 @@
 #    By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/11 02:08:04 by ocviller          #+#    #+#              #
-#    Updated: 2026/01/11 16:26:54 by ocviller         ###   ########.fr        #
+#    Updated: 2026/01/30 16:03:47 by ocviller         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC = g++
+CC = c++
 CFLAGS = -std=c++98 -Wall -Werror -Wextra
 NAME = meow
 SRC = Animal.cpp Cat.cpp Dog.cpp main.cpp WrongCat.cpp WrongAnimal.cpp
