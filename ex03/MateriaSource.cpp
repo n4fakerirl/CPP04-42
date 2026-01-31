@@ -6,7 +6,7 @@
 /*   By: nova <nova@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 18:47:37 by nova              #+#    #+#             */
-/*   Updated: 2026/01/31 18:48:52 by nova             ###   ########.fr       */
+/*   Updated: 2026/01/31 19:03:41 by nova             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,18 @@ void MateriaSource::learnMateria(AMateria *m)
 
 AMateria* MateriaSource::createMateria(std::string const &type)
 {
-    AMateria *new_mat = NULL;
-    
+    printf("hey");
+    AMateria *new_mat = 0;
+    printf("ici ?");
     for (int i = 0; i < 4; i++)
     {
         if (this->stock[i]->getType() == type)
         {
             if (type == "ice")
+            {
+                printf("ici ?");
                 new_mat = this->stock[i]->clone();
+            }
         }
     }
     return (new_mat);
