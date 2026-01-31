@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nova <nova@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/11 02:10:27 by ocviller          #+#    #+#             */
-/*   Updated: 2026/01/31 14:24:30 by nova             ###   ########.fr       */
+/*   Created: 2026/01/11 16:27:29 by ocviller          #+#    #+#             */
+/*   Updated: 2026/01/11 16:28:34 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include "Animal.hpp"
-#include "Brain.hpp"
+#include "WrongAnimal.hpp"
 
-class Cat : public Animal
+class WrongCat : public WrongAnimal
 {
-    private:
-    Brain *_catbrain;
-
     public:
-    Cat();
-    Cat(const Cat &other);
-    Cat& operator=(const Cat &other);
-    virtual ~Cat();
+    WrongCat();
+    WrongCat(const WrongCat &other);
+    WrongCat& operator=(const WrongCat &other);
+    virtual ~WrongCat();
     virtual void makeSound(void) const;
-    void set_ideas(std::string idea);
-    void print_ideas(void);
 };

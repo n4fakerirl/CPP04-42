@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nova <nova@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/11 02:10:27 by ocviller          #+#    #+#             */
-/*   Updated: 2026/01/31 14:24:30 by nova             ###   ########.fr       */
+/*   Created: 2026/01/30 15:34:37 by ocviller          #+#    #+#             */
+/*   Updated: 2026/01/31 13:06:13 by nova             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include "Animal.hpp"
-#include "Brain.hpp"
+#include <iostream>
 
-class Cat : public Animal
+class Brain
 {
     private:
-    Brain *_catbrain;
+    std::string _ideas[10];
 
     public:
-    Cat();
-    Cat(const Cat &other);
-    Cat& operator=(const Cat &other);
-    virtual ~Cat();
-    virtual void makeSound(void) const;
+    Brain();
+    Brain(const Brain &other);
+    Brain& operator=(const Brain &other);
+    ~Brain();
     void set_ideas(std::string idea);
     void print_ideas(void);
+    std::string *get_ideas(void);
 };

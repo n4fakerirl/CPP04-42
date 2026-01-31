@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nova <nova@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/11 02:10:27 by ocviller          #+#    #+#             */
-/*   Updated: 2026/01/31 14:24:30 by nova             ###   ########.fr       */
+/*   Created: 2026/01/11 02:10:31 by ocviller          #+#    #+#             */
+/*   Updated: 2026/01/31 14:25:21 by nova             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,16 @@
 #include "Animal.hpp"
 #include "Brain.hpp"
 
-class Cat : public Animal
+class Dog : public Animal
 {
     private:
-    Brain *_catbrain;
+    Brain *_dogbrain;
 
     public:
-    Cat();
-    Cat(const Cat &other);
-    Cat& operator=(const Cat &other);
-    virtual ~Cat();
+    Dog();
+    Dog(const Dog &other);
+    Dog& operator=(const Dog &other);
+    virtual ~Dog();
     virtual void makeSound(void) const;
     void set_ideas(std::string idea);
     void print_ideas(void);
