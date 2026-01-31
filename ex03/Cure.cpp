@@ -1,0 +1,59 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Cure.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nova <nova@student.42.fr>                  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/31 15:25:35 by nova              #+#    #+#             */
+/*   Updated: 2026/01/31 15:48:53 by nova             ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "Cure.hpp"
+
+Cure* Cure::clone(void) const
+{
+    Cure *dest = new Cure;
+    dest->_type = this->_type;
+    return (dest);
+}
+
+void Cure::setType(std::string name)
+{
+    this->_type = name;
+}
+
+std::string const &Cure::getType(void) const
+{
+    return (this->_type);
+}
+
+Cure::Cure()
+{
+    this->_type = "Cure";
+    std::cout << "Default Cure constructor called\n";
+}
+
+Cure::~Cure()
+{
+    if (this->_type[0] != '\0')
+        std::cout << "Destructor Cure " << this->getType() << " called\n";
+    else
+        std::cout << "Destructor Cure called\n";
+}
+
+Cure::Cure(const Cure &other)
+{
+	*this = other;
+	std::cout << "Copy Constructor called of Cure\n";
+}
+
+Cure& Cure::operator=(const Cure &other)
+{
+	if (this != &other)
+    {
+        this->_type = other._type;
+    }
+	return (*this);
+}
