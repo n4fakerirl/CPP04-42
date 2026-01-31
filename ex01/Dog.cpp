@@ -3,14 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nova <nova@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 02:11:20 by ocviller          #+#    #+#             */
-/*   Updated: 2026/01/30 16:31:54 by ocviller         ###   ########.fr       */
+/*   Updated: 2026/01/31 13:08:14 by nova             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
+
+//Dog
+
+void Dog::set_ideas(std::string idea)
+{
+    this->_dogbrain->set_ideas(idea);
+}
+
+void Dog::print_ideas(void)
+{
+    this->_dogbrain->print_ideas();
+}
 
 Dog::Dog()
 {
@@ -36,11 +48,12 @@ Dog& Dog::operator=(const Dog &other)
 	if (this != &other)
     {
         this->_type = other._type;
+        this->_dogbrain = new Brain (*other._dogbrain);
     }
 	return (*this);
 }
 
 void Dog::makeSound(void) const
 {
-    std::cout << this->getType() << " : Woaaaaaaf!\n";
+    std::cout << this->getType() << " : Meoooooooow!\n";
 }

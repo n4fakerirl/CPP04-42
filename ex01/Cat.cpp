@@ -3,16 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nova <nova@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 02:11:10 by ocviller          #+#    #+#             */
-/*   Updated: 2026/01/30 16:18:27 by ocviller         ###   ########.fr       */
+/*   Updated: 2026/01/31 13:05:59 by nova             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
 //CAT
+
+void Cat::set_ideas(std::string idea)
+{
+    this->_catbrain->set_ideas(idea);
+}
+
+void Cat::print_ideas(void)
+{
+    this->_catbrain->print_ideas();
+}
 
 Cat::Cat()
 {
@@ -38,6 +48,7 @@ Cat& Cat::operator=(const Cat &other)
 	if (this != &other)
     {
         this->_type = other._type;
+        this->_catbrain = other._catbrain;
     }
 	return (*this);
 }
