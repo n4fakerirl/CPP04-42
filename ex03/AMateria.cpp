@@ -6,16 +6,11 @@
 /*   By: nova <nova@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 14:44:00 by nova              #+#    #+#             */
-/*   Updated: 2026/01/31 18:40:14 by nova             ###   ########.fr       */
+/*   Updated: 2026/01/31 18:51:40 by nova             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AMateria.hpp"
-
-AMateria* AMateria::clone(void) const
-{
-    
-}
 
 void AMateria::use(ICharacter& target)
 {

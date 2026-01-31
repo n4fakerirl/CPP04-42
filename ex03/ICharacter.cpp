@@ -6,38 +6,11 @@
 /*   By: nova <nova@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 16:05:27 by nova              #+#    #+#             */
-/*   Updated: 2026/01/31 18:28:14 by nova             ###   ########.fr       */
+/*   Updated: 2026/01/31 18:53:05 by nova             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ICharacter.hpp"
-
-std::string const& ICharacter::getName(void) const
-{
-    return (this->_name);
-}
-
-void ICharacter::equip(AMateria* m)
-{
-    for (int i = 0; i < 4; i++)
-    {
-        if (this->inventory[i] == NULL && m != NULL)
-        {
-            this->inventory[i] = m;
-            return ;
-        }
-    }
-}
-
-void ICharacter::unequip(int idx)
-{
-    if (idx >= 0 && idx <= 3)
-        delete this->inventory[idx];
-}
-void ICharacter::use(int idx, ICharacter& target)
-{
-    this->inventory[idx]->use(target);
-}
 
 ICharacter::ICharacter()
 {

@@ -6,13 +6,15 @@
 /*   By: nova <nova@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 14:42:45 by nova              #+#    #+#             */
-/*   Updated: 2026/01/31 18:37:56 by nova             ###   ########.fr       */
+/*   Updated: 2026/01/31 18:49:17 by nova             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AMateria.hpp"
-#include"Ice.hpp"
+#include "Ice.hpp"
 #include "Cure.hpp"
+#include "MateriaSource.hpp"
+#include "Character.hpp"
 
 int main()
 {
