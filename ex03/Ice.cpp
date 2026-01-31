@@ -6,7 +6,7 @@
 /*   By: nova <nova@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 15:26:22 by nova              #+#    #+#             */
-/*   Updated: 2026/01/31 15:48:42 by nova             ###   ########.fr       */
+/*   Updated: 2026/01/31 19:50:06 by nova             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,21 +32,21 @@ Ice* Ice::clone(void) const
 Ice::Ice()
 {
     this->_type = "ice";
-    std::cout << "Default Ice constructor called\n";
+    //std::cout << "Default Ice constructor called\n";
 }
 
 Ice::~Ice()
 {
-    if (this->_type[0] != '\0')
-        std::cout << "Destructor Ice " << this->getType() << " called\n";
-    else
-        std::cout << "Destructor Ice called\n";
+    //if (this->_type[0] != '\0')
+        //std::cout << "Destructor Ice " << this->getType() << " called\n";
+    //else
+        //std::cout << "Destructor Ice called\n";
 }
 
 Ice::Ice(const Ice &other)
 {
 	*this = other;
-	std::cout << "Copy Constructor called of Ice\n";
+	//std::cout << "Copy Constructor called of Ice\n";
 }
 
 Ice& Ice::operator=(const Ice &other)

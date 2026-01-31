@@ -6,7 +6,7 @@
 /*   By: nova <nova@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 16:39:52 by nova              #+#    #+#             */
-/*   Updated: 2026/01/31 18:33:33 by nova             ###   ########.fr       */
+/*   Updated: 2026/01/31 19:26:13 by nova             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@
 class IMateriaSource
 {
     protected:
-    AMateria *stock[4];
     
     public:
     virtual ~IMateriaSource();

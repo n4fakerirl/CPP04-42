@@ -6,7 +6,7 @@
 /*   By: nova <nova@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 16:39:58 by nova              #+#    #+#             */
-/*   Updated: 2026/01/31 18:53:26 by nova             ###   ########.fr       */
+/*   Updated: 2026/01/31 19:18:18 by nova             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 IMateriaSource::~IMateriaSource()
 {
-    std::cout << "Destructor IMateriaSource called\n";
+    //std::cout << "Destructor IMateriaSource called\n";
 }
 

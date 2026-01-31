@@ -6,7 +6,7 @@
 /*   By: nova <nova@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 15:25:35 by nova              #+#    #+#             */
-/*   Updated: 2026/01/31 15:48:53 by nova             ###   ########.fr       */
+/*   Updated: 2026/01/31 19:17:50 by nova             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,21 +32,21 @@ std::string const &Cure::getType(void) const
 Cure::Cure()
 {
     this->_type = "Cure";
-    std::cout << "Default Cure constructor called\n";
+    //std::cout << "Default Cure constructor called\n";
 }
 
 Cure::~Cure()
 {
-    if (this->_type[0] != '\0')
-        std::cout << "Destructor Cure " << this->getType() << " called\n";
-    else
-        std::cout << "Destructor Cure called\n";
+    //if (this->_type[0] != '\0')
+        //std::cout << "Destructor Cure " << this->getType() << " called\n";
+    //else
+        //std::cout << "Destructor Cure called\n";
 }
 
 Cure::Cure(const Cure &other)
 {
 	*this = other;
-	std::cout << "Copy Constructor called of Cure\n";
+	//std::cout << "Copy Constructor called of Cure\n";
 }
 
 Cure& Cure::operator=(const Cure &other)
