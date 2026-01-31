@@ -6,7 +6,7 @@
 /*   By: nova <nova@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 15:25:51 by nova              #+#    #+#             */
-/*   Updated: 2026/01/31 15:48:34 by nova             ###   ########.fr       */
+/*   Updated: 2026/01/31 19:59:29 by nova             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 class Cure : public AMateria
 {
     protected:
-    std::string _type;
 
     public:
     Cure();

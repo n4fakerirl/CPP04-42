@@ -6,7 +6,7 @@
 /*   By: nova <nova@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 18:44:37 by nova              #+#    #+#             */
-/*   Updated: 2026/01/31 19:36:59 by nova             ###   ########.fr       */
+/*   Updated: 2026/01/31 20:03:15 by nova             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ void Character::equip(AMateria* m)
     {
         if (this->inventory[i] == NULL && m != NULL)
         {
-            std::cout << m->getType() << "\n";
             this->inventory[i] = m;
             return ;
         }

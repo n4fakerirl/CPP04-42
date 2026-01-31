@@ -6,7 +6,7 @@
 /*   By: nova <nova@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 15:25:35 by nova              #+#    #+#             */
-/*   Updated: 2026/01/31 19:17:50 by nova             ###   ########.fr       */
+/*   Updated: 2026/01/31 19:59:51 by nova             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ std::string const &Cure::getType(void) const
 
 Cure::Cure()
 {
-    this->_type = "Cure";
+    this->_type = "cure";
     //std::cout << "Default Cure constructor called\n";
 }
 
