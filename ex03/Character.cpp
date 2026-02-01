@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nova <nova@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 18:44:37 by nova              #+#    #+#             */
-/*   Updated: 2026/01/31 20:03:15 by nova             ###   ########.fr       */
+/*   Updated: 2026/02/01 15:23:33 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,22 +34,29 @@ void Character::unequip(int idx)
     if (idx >= 0 && idx <= 3)
     {
         if (this->inventory[idx])
-            delete this->inventory[idx];
+            this->inventory[idx] = NULL;
     }
 }
 void Character::use(int idx, ICharacter& target)
 {
-    if (this->inventory[idx])
-        this->inventory[idx]->use(target);
+    if (idx >= 0 && idx <= 3)
+    {
+        if (this->inventory[idx])
+            this->inventory[idx]->use(target);
+    }
 }
 
 Character::Character()
 {
+    for (int i = 0; i < 4; i++)
+        this->inventory[i] = NULL;
     //std::cout << "Default Character constructor called\n";
 }
 
 Character::Character(std::string name)
 {
+    for (int i = 0; i < 4; i++)
+        this->inventory[i] = NULL;
     this->_name = name;
     //std::cout << "Character constructor " << this->_name << " called\n";
 }
@@ -83,6 +90,8 @@ Character& Character::operator=(const Character &other)
         {
             if (other.inventory[i])
                 this->inventory[i] = other.inventory[i]->clone();
+            else
+                this->inventory[i] = NULL;
         }
         this->_name = other._name;
     }

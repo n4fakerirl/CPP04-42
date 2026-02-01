@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ICharacter.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nova <nova@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 15:56:29 by nova              #+#    #+#             */
-/*   Updated: 2026/01/31 18:44:24 by nova             ###   ########.fr       */
+/*   Updated: 2026/02/01 15:28:35 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,13 @@ class AMateria;
 class ICharacter
 {
     protected:
-    std::string _name;
-    AMateria *inventory[4];
-
+    
     public:
-    ICharacter();
+    ICharacter() {}
     ICharacter(std::string name);
     ICharacter(const ICharacter &other);
     ICharacter& operator=(const ICharacter &other);
-    virtual ~ICharacter();
+    virtual ~ICharacter() {}
     virtual std::string const & getName() const = 0;
     virtual void equip(AMateria* m) = 0;
     virtual void unequip(int idx) = 0;

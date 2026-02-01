@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nova <nova@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 02:11:20 by ocviller          #+#    #+#             */
-/*   Updated: 2026/01/31 15:32:06 by nova             ###   ########.fr       */
+/*   Updated: 2026/02/01 15:11:42 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,6 @@ Dog& Dog::operator=(const Dog &other)
 {
 	if (this != &other)
     {
-        delete this->_dogbrain;
         this->_type = other._type;
         this->_dogbrain = new Brain (*other._dogbrain);
     }

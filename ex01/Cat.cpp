@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nova <nova@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 02:11:10 by ocviller          #+#    #+#             */
-/*   Updated: 2026/01/31 15:31:50 by nova             ###   ########.fr       */
+/*   Updated: 2026/02/01 15:11:38 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ Cat::~Cat()
 
 Cat::Cat(const Cat &other) : Animal(other)
 {
+    std::cout << "HEY\n";
 	*this = other;
 	std::cout << "Copy Constructor called of Cat\n";
 }
@@ -47,7 +48,6 @@ Cat& Cat::operator=(const Cat &other)
 {
 	if (this != &other)
     {
-        delete this->_catbrain;
         this->_type = other._type;
         this->_catbrain = new Brain(*other._catbrain);
     }

@@ -3,18 +3,18 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: nova <nova@student.42.fr>                  +#+  +:+       +#+         #
+#    By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/31 14:42:32 by nova              #+#    #+#              #
-#    Updated: 2026/01/31 18:55:22 by nova             ###   ########.fr        #
+#    Updated: 2026/02/01 15:24:13 by ocviller         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = c++
 CFLAGS = -std=c++98 -Wall -Werror -Wextra
 NAME = materia
-SRC = AMateria.cpp Character.cpp Cure.cpp Ice.cpp ICharacter.cpp IMateriaSource.cpp main.cpp MateriaSource.cpp
-OBJ = AMateria.o Character.o Cure.o Ice.o ICharacter.o IMateriaSource.o main.o MateriaSource.o
+SRC = AMateria.cpp Character.cpp Cure.cpp Ice.cpp main.cpp MateriaSource.cpp
+OBJ = AMateria.o Character.o Cure.o Ice.o main.o MateriaSource.o
 OPTIONS = -o $(NAME)
 
 all: $(OBJ)

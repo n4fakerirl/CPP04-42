@@ -6,13 +6,13 @@
 #    By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/11 02:08:04 by ocviller          #+#    #+#              #
-#    Updated: 2026/01/30 16:12:28 by ocviller         ###   ########.fr        #
+#    Updated: 2026/02/01 15:13:52 by ocviller         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = c++
 CFLAGS = -std=c++98 -Wall -Werror -Wextra
-NAME = woaf
+NAME = abstract
 SRC = Animal.cpp Brain.cpp Cat.cpp Dog.cpp main.cpp WrongCat.cpp WrongAnimal.cpp 
 OBJ = Animal.o Brain.o Cat.o Dog.o main.o WrongCat.o WrongAnimal.o 
 OPTIONS = -o $(NAME)
