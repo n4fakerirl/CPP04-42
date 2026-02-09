@@ -45,5 +45,6 @@ ex03 : Interface & recap
 
 ## 🫐 Auteur
 
-- Océane (ocviller)
-- Piscine de Mars 2025
+* Océane (ocviller)
+* Piscine de Mars 2025
+* Projet réalisé à 42 Paris, 2026
