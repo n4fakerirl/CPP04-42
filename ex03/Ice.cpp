@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Ice.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nova <nova@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 15:26:22 by nova              #+#    #+#             */
-/*   Updated: 2026/01/31 19:50:06 by nova             ###   ########.fr       */
+/*   Updated: 2026/02/10 16:02:56 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,11 @@ Ice* Ice::clone(void) const
     Ice *dest = new Ice;
     dest->_type = this->_type;
     return (dest);
+}
+
+void Ice::use(ICharacter& target)
+{
+    std::cout << "* shoots an ice bolt at " << target.getName() << " *\n";
 }
 
 Ice::Ice()

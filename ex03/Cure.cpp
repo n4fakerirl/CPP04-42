@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cure.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nova <nova@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 15:25:35 by nova              #+#    #+#             */
-/*   Updated: 2026/01/31 19:59:51 by nova             ###   ########.fr       */
+/*   Updated: 2026/02/10 16:02:49 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,11 @@ void Cure::setType(std::string name)
 std::string const &Cure::getType(void) const
 {
     return (this->_type);
+}
+
+void Cure::use(ICharacter& target)
+{
+    std::cout << "* heals " << target.getName() << "\'s wounds *\n";
 }
 
 Cure::Cure()

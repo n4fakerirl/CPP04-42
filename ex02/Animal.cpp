@@ -6,7 +6,7 @@
 /*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 02:10:57 by ocviller          #+#    #+#             */
-/*   Updated: 2026/01/30 16:30:11 by ocviller         ###   ########.fr       */
+/*   Updated: 2026/02/10 15:56:33 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,9 @@ std::string Animal::getType(void) const
 
 void Animal::makeSound(void) const
 {
-    std::cout << this->getType() << " : UHundebnwuqd8ide\n";
+    
 }
+
 
 Animal::Animal()
 {

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nova <nova@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/30 16:08:18 by ocviller          #+#    #+#             */
-/*   Updated: 2026/01/31 13:05:31 by nova             ###   ########.fr       */
+/*   Updated: 2026/02/10 15:58:46 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 void Brain::set_ideas(std::string idea)
 {
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < 100; i++)
         this->_ideas[i] = idea;
 }
 
 void Brain::print_ideas(void)
 {
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < 100; i++)
         std::cout << this->_ideas[i] << "\n";
 }
 
@@ -49,7 +49,7 @@ Brain& Brain::operator=(const Brain &other)
 {
 	if (this != &other)
     {
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 100; i++)
             this->_ideas[i] = other._ideas[i];
     }
 	return (*this);

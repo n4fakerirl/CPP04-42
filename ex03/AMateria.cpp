@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AMateria.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nova <nova@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 14:44:00 by nova              #+#    #+#             */
-/*   Updated: 2026/01/31 20:04:54 by nova             ###   ########.fr       */
+/*   Updated: 2026/02/10 16:05:09 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,7 @@
 
 void AMateria::use(ICharacter& target)
 {
-    if (this->_type == "ice")
-        std::cout << "* shoots an ice bolt at " << target.getName() << " *\n";
-    else if (this->_type == "cure")
-        std::cout << "* heals " << target.getName() << "\'s wounds *\n";
+    (void)target;
 }
     
 std::string const& AMateria::getType(void) const

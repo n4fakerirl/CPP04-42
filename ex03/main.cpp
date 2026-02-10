@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nova <nova@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 14:42:45 by nova              #+#    #+#             */
-/*   Updated: 2026/01/31 19:47:28 by nova             ###   ########.fr       */
+/*   Updated: 2026/02/10 15:54:05 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int main()
     IMateriaSource* src = new MateriaSource();
     src->learnMateria(new Ice());
     src->learnMateria(new Cure());
-    ICharacter* me = new Character("me");
+    ICharacter* me = new Character("nova");
     AMateria* tmp;
     tmp = src->createMateria("ice");
     me->equip(tmp);

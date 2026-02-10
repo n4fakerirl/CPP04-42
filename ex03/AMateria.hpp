@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AMateria.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nova <nova@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 14:43:31 by nova              #+#    #+#             */
-/*   Updated: 2026/01/31 16:42:55 by nova             ###   ########.fr       */
+/*   Updated: 2026/02/10 15:52:25 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class AMateria
     AMateria& operator=(const AMateria &other);
     virtual ~AMateria();
 
-    std::string const & getType() const; //Returns the materia type
+    std::string const & getType() const;
     virtual AMateria* clone() const = 0;
     virtual void use(ICharacter& target);
 };
