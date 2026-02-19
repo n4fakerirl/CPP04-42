@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nova <nova@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 02:11:10 by ocviller          #+#    #+#             */
-/*   Updated: 2026/01/31 15:32:21 by nova             ###   ########.fr       */
+/*   Updated: 2026/02/19 12:04:07 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,8 @@ Cat& Cat::operator=(const Cat &other)
 {
 	if (this != &other)
     {
-        delete this->_catbrain;
+        if (this->_catbrain)
+            delete this->_catbrain;
         this->_type = other._type;
         this->_catbrain = new Brain(*other._catbrain);
     }

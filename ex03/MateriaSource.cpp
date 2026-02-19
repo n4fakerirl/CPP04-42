@@ -6,7 +6,7 @@
 /*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 18:47:37 by nova              #+#    #+#             */
-/*   Updated: 2026/02/01 15:22:05 by ocviller         ###   ########.fr       */
+/*   Updated: 2026/02/19 11:31:45 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void MateriaSource::learnMateria(AMateria *m)
     {
         if (this->stock[i] == NULL && m != NULL)
         {
-            this->stock[i] = m;
+            this->stock[i] = m->clone();
             return ;
         }
     }

@@ -6,7 +6,7 @@
 /*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 02:11:30 by ocviller          #+#    #+#             */
-/*   Updated: 2026/02/19 11:21:04 by ocviller         ###   ########.fr       */
+/*   Updated: 2026/02/19 12:06:21 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,38 +15,38 @@
 #include "Brain.hpp"
 #include "WrongCat.hpp"
 
-// int main(void)
-// {
-//     Cat meow;
-//     meow.set_ideas("hola!");
-//     meow.print_ideas();
-//     Cat copy(meow);
-//     Cat copycat = copy;
-//     std::cout << "\nCOPY\n";
-//     copy.print_ideas();
-//     std::cout << "\nCOPYCAT\n";
-//     copycat.print_ideas();
-//     meow.set_ideas("hey");
-//     std::cout << "\nprint everyone\n";
-//     meow.print_ideas();
-//     copy.print_ideas();
-//     copycat.print_ideas();
-//     std::cout << "\nprint everyone again\n";
-//     copy.set_ideas("test");
-//     meow.print_ideas();
-//     copy.print_ideas();
-//     copycat.print_ideas();
-// }
-
 int main(void)
 {
     Cat meow;
-    meow.set_ideas("une idee");
+    meow.set_ideas("hola!");
     meow.print_ideas();
-    Cat test;
-    test = meow;
-    test.print_ideas();
-    meow.set_ideas("2 idees");
+    Cat copy(meow);
+    Cat copycat = copy;
+    std::cout << "\nCOPY\n";
+    copy.print_ideas();
+    std::cout << "\nCOPYCAT\n";
+    copycat.print_ideas();
+    meow.set_ideas("hey");
+    std::cout << "\nprint everyone\n";
     meow.print_ideas();
-    test.print_ideas();
+    copy.print_ideas();
+    copycat.print_ideas();
+    std::cout << "\nprint everyone again\n";
+    copy.set_ideas("test");
+    meow.print_ideas();
+    copy.print_ideas();
+    copycat.print_ideas();
 }
+
+// int main(void)
+// {
+//     Cat meow;
+//     meow.set_ideas("une idee");
+//     meow.print_ideas();
+//     Cat test;
+//     test = meow;
+//     test.print_ideas();
+//     meow.set_ideas("2 idees");
+//     meow.print_ideas();
+//     test.print_ideas();
+// }

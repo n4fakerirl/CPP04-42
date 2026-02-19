@@ -6,7 +6,7 @@
 /*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 02:11:20 by ocviller          #+#    #+#             */
-/*   Updated: 2026/02/01 15:11:42 by ocviller         ###   ########.fr       */
+/*   Updated: 2026/02/19 11:28:34 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,8 @@ Dog& Dog::operator=(const Dog &other)
 {
 	if (this != &other)
     {
+        if (this->_dogbrain)
+            delete this->_dogbrain;
         this->_type = other._type;
         this->_dogbrain = new Brain (*other._dogbrain);
     }

@@ -6,7 +6,7 @@
 /*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 02:11:30 by ocviller          #+#    #+#             */
-/*   Updated: 2026/02/10 16:00:34 by ocviller         ###   ########.fr       */
+/*   Updated: 2026/02/19 12:07:03 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,16 @@
 int main(void)
 {
     //Animal abstract;
-    Animal *test = new Cat;
-    test->makeSound();
-    delete test;
+    Animal *ani = new Cat;
+    ani->makeSound();
+    delete ani;
+    Cat meow;
+    meow.set_ideas("une idee");
+    meow.print_ideas();
+    Cat test;
+    test = meow;
+    test.print_ideas();
+    meow.set_ideas("2 idees");
+    meow.print_ideas();
+    test.print_ideas();
 }

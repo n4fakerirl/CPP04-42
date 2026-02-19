@@ -6,7 +6,7 @@
 /*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 02:11:10 by ocviller          #+#    #+#             */
-/*   Updated: 2026/02/19 11:26:14 by ocviller         ###   ########.fr       */
+/*   Updated: 2026/02/19 11:28:04 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,8 @@ Cat& Cat::operator=(const Cat &other)
 {
 	if (this != &other)
     {
+        if (this->_catbrain)
+            delete this->_catbrain;
         this->_type = other._type;
         this->_catbrain = new Brain(*other._catbrain);
     }

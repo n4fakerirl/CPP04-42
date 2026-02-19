@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nova <nova@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 18:42:18 by nova              #+#    #+#             */
-/*   Updated: 2026/01/31 18:49:39 by nova             ###   ########.fr       */
+/*   Updated: 2026/02/19 12:26:51 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ class Character : public ICharacter
     protected:
     std::string _name;
     AMateria *inventory[4];
+    AMateria *trash[50];
+    int       _trash_nbr;
 
     public:
     Character();
@@ -30,4 +32,5 @@ class Character : public ICharacter
     void equip(AMateria* m);
     void unequip(int idx);
     void use(int idx, ICharacter& target);
+    void print_trash(void);
 };
