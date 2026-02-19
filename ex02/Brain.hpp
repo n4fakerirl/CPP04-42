@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nova <nova@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/30 15:34:37 by ocviller          #+#    #+#             */
-/*   Updated: 2026/01/31 13:06:13 by nova             ###   ########.fr       */
+/*   Updated: 2026/02/19 11:12:11 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 class Brain
 {
     private:
-    std::string _ideas[10];
+    std::string _ideas[100];
 
     public:
     Brain();
