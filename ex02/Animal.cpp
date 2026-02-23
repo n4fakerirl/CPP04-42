@@ -6,7 +6,7 @@
 /*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 02:10:57 by ocviller          #+#    #+#             */
-/*   Updated: 2026/02/10 15:56:33 by ocviller         ###   ########.fr       */
+/*   Updated: 2026/02/23 12:12:02 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,6 @@ std::string Animal::getType(void) const
 {
     return (this->_type);
 }
-
-void Animal::makeSound(void) const
-{
-    
-}
-
 
 Animal::Animal()
 {

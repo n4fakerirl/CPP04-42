@@ -6,7 +6,7 @@
 /*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 02:11:30 by ocviller          #+#    #+#             */
-/*   Updated: 2026/02/19 12:06:21 by ocviller         ###   ########.fr       */
+/*   Updated: 2026/02/23 12:09:08 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,9 @@
 int main(void)
 {
     Cat meow;
+    meow.makeSound();
+    Dog woaf;
+    woaf.makeSound();
     meow.set_ideas("hola!");
     meow.print_ideas();
     Cat copy(meow);

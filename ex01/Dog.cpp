@@ -6,7 +6,7 @@
 /*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 02:11:20 by ocviller          #+#    #+#             */
-/*   Updated: 2026/02/19 11:28:34 by ocviller         ###   ########.fr       */
+/*   Updated: 2026/02/23 12:09:57 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ Dog::~Dog()
     std::cout << "Destructor Dog called\n";
 }
 
-Dog::Dog(const Dog &other) : Animal(other)
+Dog::Dog(const Dog &other) : Animal(other), _dogbrain(NULL)
 {
 	*this = other;
 	std::cout << "Copy Constructor called of Dog\n";
@@ -57,5 +57,5 @@ Dog& Dog::operator=(const Dog &other)
 
 void Dog::makeSound(void) const
 {
-    std::cout << this->getType() << " : Meoooooooow!\n";
+    std::cout << this->getType() << " : Woaaaaaaf!\n";
 }
