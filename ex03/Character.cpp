@@ -6,7 +6,7 @@
 /*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 18:44:37 by nova              #+#    #+#             */
-/*   Updated: 2026/02/19 12:28:13 by ocviller         ###   ########.fr       */
+/*   Updated: 2026/02/26 16:28:19 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,12 +93,12 @@ Character::~Character()
 {
     for (int i = 0; i < 4; i++)
     {
-        if (this->inventory[i])
+        if (this->inventory[i] != NULL)
             delete this->inventory[i];
     }
     for (int i = 0; i < 50; i++)
     {
-        if (this->trash[i])
+        if (this->trash[i] != NULL)
             delete this->trash[i];
     }
     //std::cout << "Destructor Character called\n";

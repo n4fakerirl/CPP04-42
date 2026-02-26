@@ -6,7 +6,7 @@
 /*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 15:26:22 by nova              #+#    #+#             */
-/*   Updated: 2026/02/10 16:02:56 by ocviller         ###   ########.fr       */
+/*   Updated: 2026/02/26 16:01:12 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void Ice::setType(std::string name)
 
 Ice* Ice::clone(void) const
 {
-    Ice *dest = new Ice;
+    Ice *dest = new Ice();
     dest->_type = this->_type;
     return (dest);
 }

@@ -6,7 +6,7 @@
 /*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 15:25:35 by nova              #+#    #+#             */
-/*   Updated: 2026/02/10 16:02:49 by ocviller         ###   ########.fr       */
+/*   Updated: 2026/02/26 16:00:29 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Cure* Cure::clone(void) const
 {
-    Cure *dest = new Cure;
+    Cure *dest = new Cure();
     dest->_type = this->_type;
     return (dest);
 }
