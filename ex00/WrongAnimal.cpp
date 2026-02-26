@@ -6,7 +6,7 @@
 /*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 16:29:25 by ocviller          #+#    #+#             */
-/*   Updated: 2026/01/11 16:29:44 by ocviller         ###   ########.fr       */
+/*   Updated: 2026/02/26 14:03:42 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ std::string WrongAnimal::getType(void) const
 
 void WrongAnimal::makeSound(void) const
 {
-    std::cout << this->getType() << " : UHundebnwuqd8ide\n";
+   std::cout << this->getType() << ": * Generic WRONG animal sound *\n";
 }
 
 WrongAnimal::WrongAnimal()

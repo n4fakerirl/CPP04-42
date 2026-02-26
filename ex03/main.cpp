@@ -6,7 +6,7 @@
 /*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 14:42:45 by nova              #+#    #+#             */
-/*   Updated: 2026/02/26 16:27:57 by ocviller         ###   ########.fr       */
+/*   Updated: 2026/02/26 16:40:54 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,45 +40,31 @@ int main()
     for (int i = 0; i < 4; i++)
         me->use(i, *bob);
     std::cout << "\n\nCHARACTER BOB INVENTORY\n\n";
-    *(bob) = *(me);
+    *static_cast<Character*>(bob) = *static_cast<Character*>(me);
     for (int i = 0; i < 4; i++)
         bob->use(i, *me);
+    tmp = src->createMateria("cure");
+    bob->equip(tmp);
+    delete tmp;
+    tmp = src->createMateria("ice");
+    bob->equip(tmp);
+    delete tmp;
+    me->unequip(0);
+    bob->unequip(0);
+    std::cout << "\n\nBOTH CHARACTERS INVENTORY AND TRASH\n\n";
+    std::cout << "NOVA INVENTORY\n";
+    for (int i = 0; i < 4; i++)
+        me->use(i, *bob);
+    std::cout << "NOVA TRASH\n";
+    me->print_trash();
+    std::cout << "BOB INVENTORY\n";
+    for (int i = 0; i < 4; i++)
+        bob->use(i, *me);
+    std::cout << "BOB TRASH\n";
+    bob->print_trash();
     //DELETE
     delete me;
     delete bob;
     delete src;
-    
-    //ICharacter *other;
-    // ICharacter* me = new Character("nova");
-    // AMateria* tmp;
-    // tmp = src->createMateria("ice");
-    // me->equip(tmp);
-    // delete tmp;
-    // tmp = src->createMateria("cure");
-    // me->equip(tmp);
-    
-    // delete tmp;
-    
-    // std::cout << me->getName() << " materia user :\n\n";
-    // ICharacter* bob = new Character("bob");
-    // me->use(0, *bob);
-    // me->use(1, *bob);
-    // me->unequip(0);
-    // me->print_trash();
-    // me->use(0, *bob);
-    // me->unequip(1);
-    // me->print_trash();
-    // ICharacter* other;
-    // other = me;
-    // std::cout << "\n\nOTHER COPY\n\n";
-    // tmp = src->createMateria("cure");
-    // other->equip(tmp);
-    // delete tmp;
-    // other->use(0, *me);
-    // other->unequip(0);
-    // other->print_trash();
-    // delete bob;
-    // delete me;
-    // delete src;
-    // return 0;
+    return (0);
 }

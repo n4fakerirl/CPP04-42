@@ -6,12 +6,12 @@
 /*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 02:11:20 by ocviller          #+#    #+#             */
-/*   Updated: 2026/02/23 12:09:57 by ocviller         ###   ########.fr       */
+/*   Updated: 2026/02/26 14:25:27 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
-
+#include <stdio.h>
 //Dog
 
 void Dog::set_ideas(std::string idea)

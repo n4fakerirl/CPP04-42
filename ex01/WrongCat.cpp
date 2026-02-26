@@ -6,7 +6,7 @@
 /*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 16:27:05 by ocviller          #+#    #+#             */
-/*   Updated: 2026/01/30 11:26:19 by ocviller         ###   ########.fr       */
+/*   Updated: 2026/02/26 14:02:40 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,5 @@ WrongCat& WrongCat::operator=(const WrongCat &other)
 
 void WrongCat::makeSound(void) const
 {
-    std::cout << this->getType() << " : Meoooooooow!\n";
+    std::cout << this->getType() << " : WrongMeoooooooow!\n";
 }
