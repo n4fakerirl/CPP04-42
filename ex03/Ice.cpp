@@ -6,7 +6,7 @@
 /*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 15:26:22 by nova              #+#    #+#             */
-/*   Updated: 2026/02/26 16:01:12 by ocviller         ###   ########.fr       */
+/*   Updated: 2026/03/02 10:05:50 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ Ice::~Ice()
         //std::cout << "Destructor Ice called\n";
 }
 
-Ice::Ice(const Ice &other)
+Ice::Ice(const Ice &other) : AMateria(other)
 {
 	*this = other;
 	//std::cout << "Copy Constructor called of Ice\n";

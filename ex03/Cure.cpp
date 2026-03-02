@@ -6,7 +6,7 @@
 /*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 15:25:35 by nova              #+#    #+#             */
-/*   Updated: 2026/02/26 16:00:29 by ocviller         ###   ########.fr       */
+/*   Updated: 2026/03/02 10:05:40 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ Cure::~Cure()
         //std::cout << "Destructor Cure called\n";
 }
 
-Cure::Cure(const Cure &other)
+Cure::Cure(const Cure &other) : AMateria(other)
 {
 	*this = other;
 	//std::cout << "Copy Constructor called of Cure\n";
