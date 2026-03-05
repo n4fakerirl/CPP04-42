@@ -6,7 +6,7 @@
 /*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 02:11:30 by ocviller          #+#    #+#             */
-/*   Updated: 2026/02/26 15:10:55 by ocviller         ###   ########.fr       */
+/*   Updated: 2026/03/05 15:40:12 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,32 +33,32 @@ int main(void)
     for (int i = 0; i < 10; i++)
         zoo[i]->makeSound();
     std::cout << "BRAIN TESTS\n";
-    // Dog basic;
-    // {
-    //     Dog tmp = basic;
-    // }
-    // Cat meow;
-    // meow.makeSound();
-    // Dog woaf;
-    // woaf.makeSound();
-    // meow.set_ideas("hola!");
-    // meow.print_ideas();
-    // Cat copy(meow);
-    // Cat copycat = copy;
-    // std::cout << "\nCOPY\n";
-    // copy.print_ideas();
-    // std::cout << "\nCOPYCAT\n";
-    // copycat.print_ideas();
-    // meow.set_ideas("hey");
-    // std::cout << "\nprint everyone\n";
-    // meow.print_ideas();
-    // copy.print_ideas();
-    // copycat.print_ideas();
-    // std::cout << "\nprint everyone again\n";
-    // copy.set_ideas("test");
-    // meow.print_ideas();
-    // copy.print_ideas();
-    // copycat.print_ideas();
+    Dog basic;
+    {
+        Dog tmp = basic;
+    }
+    Cat meow;
+    meow.makeSound();
+    Dog woaf;
+    woaf.makeSound();
+    meow.set_ideas("hola!");
+    meow.print_ideas();
+    Cat copy(meow);
+    Cat copycat = copy;
+    std::cout << "\nCOPY\n";
+    copy.print_ideas();
+    std::cout << "\nCOPYCAT\n";
+    copycat.print_ideas();
+    meow.set_ideas("hey");
+    std::cout << "\nprint everyone\n";
+    meow.print_ideas();
+    copy.print_ideas();
+    copycat.print_ideas();
+    std::cout << "\nprint everyone again\n";
+    copy.set_ideas("test");
+    meow.print_ideas();
+    copy.print_ideas();
+    copycat.print_ideas();
     delete test;
     for (int i = 0; i < 10; i++)
         delete zoo[i];
