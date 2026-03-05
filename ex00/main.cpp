@@ -6,7 +6,7 @@
 /*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 02:11:30 by ocviller          #+#    #+#             */
-/*   Updated: 2026/01/30 15:28:23 by ocviller         ###   ########.fr       */
+/*   Updated: 2026/03/05 15:24:58 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,15 @@
 int main(void)
 {
     const Animal* basic = new Animal();
+    if (!basic)
+        return (0);
     const Animal* dog = new Dog();
+    if (!dog)
+        return (delete basic, 0);
     const Animal* cat = new Cat();
-
+    if (!cat)
+        return (delete basic, delete dog, 0);
+    
     std::cout << "\nTRUE ANIMALS\n\n";
     std::cout << dog->getType() << " " << std::endl;
     std::cout << cat->getType() << " " << std::endl;
