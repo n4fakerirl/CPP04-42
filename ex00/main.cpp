@@ -6,7 +6,7 @@
 /*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 02:11:30 by ocviller          #+#    #+#             */
-/*   Updated: 2026/03/05 15:37:20 by ocviller         ###   ########.fr       */
+/*   Updated: 2026/04/21 11:06:00 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,9 @@ int main(void)
     const Animal* cat = new Cat();
     
     std::cout << "\nTRUE ANIMALS\n\n";
-    std::cout << dog->getType() << " " << std::endl;
-    std::cout << cat->getType() << " " << std::endl;
+    std::cout << "DOG TYPE : " << dog->getType() << " " << std::endl;
+    std::cout << "CAT TYPE : " << cat->getType() << " " << std::endl;
+    std::cout << "ANIMAL TYPE : " << basic->getType() << " " << std::endl << std::endl;
     cat->makeSound();
     dog->makeSound();
     basic->makeSound();
@@ -30,8 +31,8 @@ int main(void)
     std::cout << "\nWRONG ANIMALS\n\n";
     const WrongAnimal* wrongmeow = new WrongCat();
     const WrongAnimal* wrongani = new WrongAnimal();
-    std::cout << "\n" << wrongmeow->getType() << " " << std::endl;
-    std::cout << wrongani->getType() << " " << std::endl;
+    std::cout << "\n" << "WRONGMEOW TYPE : " << wrongmeow->getType() << " " << std::endl;
+    std::cout << "WRONGANI TYPE : " << wrongani->getType() << " " << std::endl;
     wrongmeow->makeSound();
     wrongani->makeSound();
     std::cout << "\n";
